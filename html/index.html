@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!-- The <html> element is the root element of an HTML page. -->
+<html lang="en">
+  <!-- The <head> element contains meta-information about the HTML document. -->
+  <head>
+    <!-- The <title> element specifies a title for the HTML page, shown in the browser's title bar or tab. -->
+    <title>Comprehensive HTML Elements Showcase</title>
+
+    <!-- The <meta> element provides metadata. 'charset' specifies the character encoding. -->
+    <meta charset="UTF-8" />
+    <!-- The viewport meta element controls how the page is displayed on different devices, especially mobile. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 'name' and 'content' attributes can be used for description, keywords, author, etc. -->
+    <meta
+      name="description"
+      content="A demonstration of all common HTML elements."
+    />
+
+    <!-- The <base> element specifies the base URL for all relative URLs in the page. -->
+    <!-- For example, the link below would point to 'https://www.example.com/assets/styles.css' -->
+    <base href="https://www.example.com/" target="_blank" />
+
+    <!-- The <link> element defines the relationship between the current document and an external resource. -->
+    <!-- Here, it links to an external stylesheet. Since we are using internal styles, this is just for demonstration. -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <!-- The <body> element defines the document's body, and is a container for all the visible contents. -->
+  <body>
+    <div class="container">
+      <!-- The <header> element represents introductory content, typically a group of introductory or navigational aids. -->
+      <!-- The 'id' attribute provides a unique identifier for an element. -->
+      <header id="main-header">
+        <!-- <h1> to <h6> elements represent six levels of section headings. -->
+        <h1>HTML Elements Glossary Showcase</h1>
+        <!-- The <nav> element represents a section of a page whose purpose is to provide navigation links. -->
+        <nav>
+          <a href="#text">Text</a>
+          <a href="#media">Media</a>
+          <a href="#forms">Forms</a>
+        </nav>
+      </header>
+
+      <!-- The <main> element represents the dominant content of the <body> of a document. -->
+      <main>
+        <!-- The <section> element represents a generic standalone section of a document. -->
+        <section>
+          <h2 class="section-title">Introduction</h2>
+          <!-- The <p> element represents a paragraph. -->
+          <p>
+            This document demonstrates the usage of every common HTML element
+            described in the provided glossary. Each section explains and
+            showcases a group of related tags.
+          </p>
+          <!-- The 'class' attribute specifies one or more class names for an element, used for styling or scripting. -->
+          <p class="highlight">
+            This paragraph has a 'highlight' class, but no specific style is
+            applied in this demo.
+          </p>
+        </section>
+
+        <!-- The <article> element represents a self-contained composition in a document (e.g., a blog post). -->
+        <article class="element-group">
+          <h2 id="text" class="section-title">Sectioning & Text Content</h2>
+
+          <!-- The <div> is a generic container for flow content. It has no effect on the content or layout until styled. -->
+          <div>
+            <h3>Text Formatting</h3>
+            <!-- The <blockquote> element indicates that the enclosed text is an extended quotation. -->
+            <blockquote>
+              "The difference between block-level and inline elements is a
+              fundamental concept in HTML."
+            </blockquote>
+            <!-- The <hr> element represents a thematic break between paragraph-level elements (e.g., a horizontal rule). -->
+            <hr />
+            <p>
+              <!-- The <span> element is a generic inline container for phrasing content, used to group elements for styling purposes. -->
+              This paragraph uses <span>various inline elements</span>.
+              <!-- The <a> element (or anchor element) creates a hyperlink. -->
+              This is a <a href="https://www.w3.org/" target="_self">link</a>.
+              <br />
+              <!-- The <br> element produces a line break. -->
+              This text is <strong>important (strong)</strong>, and this is
+              <em>emphasized (em)</em>. This is a non-textual annotation:
+              <u>underlined text</u>.
+            </p>
+            <p>
+              Inline code is shown with <code>&lt;p&gt;</code>, while keyboard
+              input is shown with <kbd>Ctrl</kbd>+<kbd>S</kbd>.
+              <br />
+              This is a <q>short inline quotation</q>. And this text is
+              <mark>highlighted</mark>.
+              <br />
+              <abbr title="HyperText Markup Language">HTML</abbr> is a markup
+              language. The book <cite>Moby Dick</cite> is a classic.
+              <br />
+              This is <small>small print</small>. H<sub>2</sub>O (subscript) and
+              E=MC<sup>2</sup> (superscript).
+              <br />
+              The event starts at
+              <time datetime="2026-01-01T20:00">8 PM on New Year's Day</time>.
+            </p>
+          </div>
+
+          <!-- The <pre> element represents preformatted text. Whitespace inside this element is displayed as written. -->
+          <pre>
+            This is preformatted text.
+            It preserves      spaces
+            and line breaks.
+          </pre>
+
+          <h3>Lists</h3>
+          <!-- <ol> is an ordered list. -->
+          <ol>
+            <li>First item</li>
+            <li>Second item</li>
+          </ol>
+          <!-- <ul> is an unordered list. -->
+          <ul>
+            <li>Bullet item</li>
+            <li>Another bullet</li>
+          </ul>
+          <!-- <dl> is a description list. -->
+          <dl>
+            <dt>HTML</dt>
+            <!-- <dt> is a term in a description list. -->
+            <dd>The standard markup language for creating web pages.</dd>
+            <!-- <dd> is the description of the term. -->
+          </dl>
+        </article>
+
+        <section id="media" class="element-group">
+          <h2 class="section-title">Image & Multimedia</h2>
+
+          <!-- The <figure> element represents self-contained content, like illustrations, diagrams, photos, code listings, etc. -->
+          <figure>
+            <!-- The <img> element embeds an image. 'src' is the path, 'alt' is for accessibility. -->
+            <img
+              src="https://via.placeholder.com/150"
+              alt="150x150"
+              width="150"
+              height="150"
+            />
+            <!-- The <figcaption> element represents a caption or legend for a <figure>. -->
+            <figcaption>Fig.1 - A placeholder image.</figcaption>
+          </figure>
+
+          <!-- The <audio> element is used to embed sound content. 'controls' adds play/pause/volume controls. -->
+          <audio controls src="audio.mp3">
+            Your browser does not support the audio element.
+          </audio>
+          <br />
+          <!-- The <video> element is used to embed video content. 'poster' is an image shown before play. -->
+          <video
+            controls
+            width="300"
+            poster="https://via.placeholder.com/300x150"
+            src="video.mp4"
+          >
+            <!-- The <track> element specifies text tracks for media elements. -->
+            <!-- 'kind' can be: subtitles, captions, descriptions, chapters, or metadata -->
+            <track
+              kind="subtitles"
+              src="subtitles_en.vtt"
+              srclang="en"
+              label="English"
+              default
+            />
+            <track
+              kind="descriptions"
+              src="descriptions_en.vtt"
+              srclang="en"
+              label="English Descriptions"
+            />
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- The <iframe> element represents a nested browsing context, embedding another HTML page. -->
+          <h3>Iframe</h3>
+          <iframe
+            title="Blank Page"
+            src="about:blank"
+            width="100%"
+            height="100"
+            class="iframe-border"
+          ></iframe>
+
+          <!-- The <canvas> element is used to draw graphics, on the fly, via scripting (usually JavaScript). -->
+          <h3>Canvas</h3>
+          <canvas
+            id="myCanvas"
+            width="200"
+            height="100"
+            class="canvas-border"
+          ></canvas>
+        </section>
+
+        <section class="element-group">
+          <h2 class="section-title">Table Content</h2>
+          <!-- The <table> element represents tabular data. -->
+          <table>
+            <!-- The <caption> element specifies the caption (or title) of a table. -->
+            <caption>
+              Employee Data
+            </caption>
+            <!-- The <colgroup> element specifies a group of one or more columns in a table for formatting. -->
+            <colgroup>
+              <!-- The <col> element is used to specify column properties for each column within a <colgroup> element. -->
+              <col span="1" class="col-bg-light" />
+              <col span="2" class="col-bg-dark" />
+            </colgroup>
+            <!-- The <thead> element is used to group header content in an HTML table. -->
+            <thead>
+              <!-- The <tr> element defines a row in a table. -->
+              <tr>
+                <th>ID</th>
+                <!-- The <th> element defines a header cell. -->
+                <th>Name</th>
+                <th>Department</th>
+              </tr>
+            </thead>
+            <!-- The <tbody> element is used to group the body content in an HTML table. -->
+            <tbody>
+              <tr>
+                <td>1</td>
+                <!-- The <td> element defines a standard data cell. -->
+                <td>John Doe</td>
+                <td>Engineering</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>Marketing</td>
+              </tr>
+            </tbody>
+            <!-- The <tfoot> element is used to group footer content in an HTML table. -->
+            <tfoot>
+              <tr>
+                <td colspan="3">Total Employees: 2</td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+
+        <!-- The <aside> element represents a portion of a document whose content is only indirectly related to the document's main content (e.g., a sidebar). -->
+        <aside class="element-group">
+          <h4>Did you know?</h4>
+          <p>
+            HTML5 introduced many of these semantic elements like
+            &lt;article&gt;, &lt;section&gt;, and &lt;aside&gt; to give more
+            meaning to web page structure.
+          </p>
+        </aside>
+
+        <section id="forms" class="element-group">
+          <h2 class="section-title">Forms</h2>
+          <!-- The <form> element represents a document section containing interactive controls for submitting information. -->
+          <form
+            action="#"
+            method="post"
+            enctype="multipart/form-data"
+            novalidate
+          >
+            <!-- The <fieldset> element is used to group several controls as well as labels (<label>) within a web form. -->
+            <fieldset>
+              <!-- The <legend> element represents a caption for the content of its parent <fieldset>. -->
+              <legend>User Information</legend>
+
+              <!-- The <label> element represents a caption for an item in a user interface. -->
+              <label for="name">Text Input:</label>
+              <!-- The <input> element is used to create interactive controls for web-based forms. -->
+              <input
+                type="text"
+                id="name"
+                name="user_name"
+                placeholder="e.g., John Doe"
+                required
+                maxlength="50"
+                autofocus
+              />
+
+              <label for="password">Password Input:</label>
+              <input
+                type="password"
+                id="password"
+                name="user_password"
+                required
+              />
+
+              <label for="email">Email Input:</label>
+              <input type="email" id="email" name="user_email" required />
+
+              <label for="phone">Telephone Input:</label>
+              <input type="tel" id="phone" name="user_phone" />
+
+              <label for="website">URL Input:</label>
+              <input type="url" id="website" name="user_website" />
+
+              <label for="search">Search Input:</label>
+              <input type="search" id="search" name="query" />
+
+              <label for="birthdate">Date Input:</label>
+              <input
+                type="date"
+                id="birthdate"
+                name="user_birthdate"
+                min="1900-01-01"
+                max="2025-12-31"
+              />
+
+              <label for="quantity">Number Input:</label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                max="100"
+                step="1"
+                value="1"
+              />
+
+              <label for="volume">Range Input:</label>
+              <input type="range" id="volume" name="volume" min="0" max="100" />
+
+              <label for="favcolor">Color Input:</label>
+              <input
+                type="color"
+                id="favcolor"
+                name="favcolor"
+                value="#007bff"
+              />
+
+              <label for="profile_pic">File Input:</label>
+              <input
+                type="file"
+                id="profile_pic"
+                name="profile_pic"
+                accept="image/*"
+              />
+
+              <!-- Radio buttons -->
+              <p>Gender:</p>
+              <input
+                type="radio"
+                id="male"
+                name="gender"
+                value="male"
+                checked
+              />
+              <label for="male" class="label-inline">Male</label>
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female" class="label-inline">Female</label>
+
+              <!-- Checkbox -->
+              <p>Options:</p>
+              <input
+                type="checkbox"
+                id="subscribe"
+                name="subscribe"
+                value="yes"
+                checked
+              />
+              <label for="subscribe" class="label-inline"
+                >Subscribe to newsletter</label
+              >
+
+              <!-- The <textarea> element represents a multi-line plain-text editing control. -->
+              <label for="comment">Textarea:</label>
+              <textarea
+                id="comment"
+                name="comment"
+                rows="4"
+                cols="50"
+                placeholder="Enter your comment here..."
+                readonly
+              >
+This is a readonly textarea.</textarea
+              >
+
+              <!-- The <select> element represents a control that provides a menu of options. -->
+              <label for="car-select">Select with Optgroup:</label>
+              <select name="cars" id="car-select">
+                <!-- The <optgroup> element creates a grouping of options within a <select> element. -->
+                <optgroup label="Swedish Cars">
+                  <!-- The <option> element defines an item in a select, optgroup, or datalist. -->
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option>
+                </optgroup>
+                <optgroup label="German Cars">
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi" selected>Audi</option>
+                </optgroup>
+              </select>
+
+              <!-- The <datalist> element contains a set of <option> elements that represent pre-defined options for other controls. -->
+              <label for="browser-choice">Datalist Input:</label>
+              <input list="browsers" id="browser-choice" name="browser" />
+              <datalist id="browsers">
+                <option value="Edge"></option>
+                <option value="Firefox"></option>
+                <option value="Chrome"></option>
+                <option value="Opera"></option>
+                <option value="Safari"></option>
+              </datalist>
+
+              <!-- The <progress> element displays an indicator showing the completion progress of a task. -->
+              <label for="file">File progress:</label>
+              <progress id="file" value="32" max="100">32%</progress>
+
+              <!-- The <meter> element represents either a scalar value within a known range or a fractional value. -->
+              <label for="disk_d">Disk usage D:</label>
+              <meter id="disk_d" value="0.6">60%</meter>
+
+              <!-- The <output> element is a container into which a site or app can inject the results of a calculation. -->
+              <p>Calculation Output:</p>
+              <output name="result" for="a b">100</output>
+
+              <!-- Hidden input is not visible but its value is submitted. -->
+              <input type="hidden" name="session_id" value="xyz123" />
+
+              <!-- The <button> element is an interactive element activated by a user. -->
+              <button type="submit">Submit with &lt;button&gt;</button>
+              <button type="reset">Reset with &lt;button&gt;</button>
+              <button type="button" onclick="alert('Hello!')">
+                Generic Button
+              </button>
+
+              <!-- Input types for buttons -->
+              <input type="submit" value="Submit with <input>" />
+              <input type="reset" value="Reset with <input>" />
+              <input
+                type="button"
+                value="Click Me"
+                onclick="alert('Hi!')"
+                disabled
+              />
+            </fieldset>
+          </form>
+        </section>
+
+        <section class="element-group">
+          <h2 class="section-title">Interactive Elements</h2>
+          <!-- The <details> element creates a disclosure widget in which information is only visible when the widget is toggled into an "open" state. -->
+          <details>
+            <!-- The <summary> element specifies a summary, caption, or legend for a <details> element's disclosure box. -->
+            <summary>Click to see details</summary>
+            <p>Here is some hidden information that is now visible.</p>
+          </details>
+
+          <!-- The <dialog> element represents a dialog box or other interactive component. -->
+          <dialog id="myDialog">
+            <h3>Dialog Window</h3>
+            <p>This is a modal dialog. Click the button to close.</p>
+            <button id="closeDialog">Close</button>
+          </dialog>
+          <button id="showDialog">Show Dialog</button>
+        </section>
+      </main>
+
+      <!-- The <footer> element represents a footer for its nearest sectioning content or sectioning root. -->
+      <footer>
+        <hr />
+        <!-- The <address> element indicates that the enclosed HTML provides contact information. -->
+        <address>
+          Posted by: John Doe<br />
+          Contact: <a href="mailto:johndoe@example.com">johndoe@example.com</a>
+        </address>
+        <p>&copy; 2026 All Rights Reserved.</p>
+      </footer>
+    </div>
+
+    <!-- The <script> element is used to embed or reference executable code; it is usually JavaScript. -->
+    <script>
+      // Script for the dialog element
+      const dialog = document.getElementById("myDialog");
+      document.getElementById("showDialog").addEventListener("click", () => {
+        dialog.showModal(); // Shows the dialog as a modal window
+      });
+      document.getElementById("closeDialog").addEventListener("click", () => {
+        dialog.close(); // Closes the dialog
+      });
+
+      // Script for the canvas element
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = "#007bff";
+      ctx.fillRect(10, 10, 150, 80);
+    </script>
+
+    <!-- The <noscript> element defines a section of HTML to be inserted if a script type on the page is unsupported or if scripting is turned off in the browser. -->
+    <noscript>
+      <p>
+        This page requires JavaScript to function fully. Please enable it in
+        your browser settings.
+      </p>
+    </noscript>
+  </body>
+</html>
