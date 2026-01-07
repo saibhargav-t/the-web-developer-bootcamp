@@ -255,12 +255,7 @@
         <section id="forms" class="element-group">
           <h2 class="section-title">Forms</h2>
           <!-- The <form> element represents a document section containing interactive controls for submitting information. -->
-          <form
-            action="#"
-            method="post"
-            enctype="multipart/form-data"
-            novalidate
-          >
+          <form action="#" method="post" enctype="multipart/form-data">
             <!-- The <fieldset> element is used to group several controls as well as labels (<label>) within a web form. -->
             <fieldset>
               <!-- The <legend> element represents a caption for the content of its parent <fieldset>. -->
@@ -275,7 +270,10 @@
                 name="user_name"
                 placeholder="e.g., John Doe"
                 required
+                minlength="2"
                 maxlength="50"
+                pattern="[A-Za-z\s]+"
+                title="Please enter letters and spaces only."
                 autofocus
               />
 
@@ -285,16 +283,37 @@
                 id="password"
                 name="user_password"
                 required
+                minlength="8"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
               />
 
               <label for="email">Email Input:</label>
-              <input type="email" id="email" name="user_email" required />
+              <input
+                type="email"
+                id="email"
+                name="user_email"
+                required
+                maxlength="60"
+              />
 
               <label for="phone">Telephone Input:</label>
-              <input type="tel" id="phone" name="user_phone" />
+              <input
+                type="tel"
+                id="phone"
+                name="user_phone"
+                placeholder="123-456-7890"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                title="Please enter a phone number in the format xxx-xxx-xxxx"
+              />
 
               <label for="website">URL Input:</label>
-              <input type="url" id="website" name="user_website" />
+              <input
+                type="url"
+                id="website"
+                name="user_website"
+                placeholder="https://example.com"
+              />
 
               <label for="search">Search Input:</label>
               <input type="search" id="search" name="query" />
@@ -372,10 +391,10 @@
                 rows="4"
                 cols="50"
                 placeholder="Enter your comment here..."
-                readonly
-              >
-This is a readonly textarea.</textarea
-              >
+                required
+                minlength="10"
+                maxlength="200"
+              ></textarea>
 
               <!-- The <select> element represents a control that provides a menu of options. -->
               <label for="car-select">Select with Optgroup:</label>
